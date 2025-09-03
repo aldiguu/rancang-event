@@ -131,7 +131,43 @@
 .btn:hover {
   background-color: #ce6e55; /* warna saat di-hover */
 }
-	  
+
+/* Default tampilan desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1a1a2e;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+  }
+}
+
 
     footer {
       background: #04132a;
@@ -149,10 +185,15 @@
       <img src="Rancangevent-LOGO.png" alt="Merancang Logo">
     </div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+     <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      ☰
+    </div>
     </nav>
   </header>
 
@@ -216,6 +257,18 @@
   </div>
 </section>
 
+  <!-- script JS -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+
 
   <footer>
     <p>&copy; 2025 Merancang | Event & Creative. All rights reserved.</p>
@@ -223,6 +276,7 @@
 
 </body>
 </html>
+
 
 
 
