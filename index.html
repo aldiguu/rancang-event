@@ -297,12 +297,10 @@
     navLinks.classList.toggle('active');
   });
 
- // Tutup menu saat klik di luar menu / hamburger
-  document.addEventListener('click', (event) => {
-    if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+// nutup menu setelah klik salah satu link
+  links.forEach(link => {
+    link.addEventListener('click', () => {
       navLinks.classList.remove('active');
-	  
-
     });
   });
 </script>
@@ -317,6 +315,7 @@
 
 </body>
 </html>
+
 
 
 
