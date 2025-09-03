@@ -167,6 +167,35 @@
     color: white;
   }
 }
+	  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #04132a;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 0 10px;
+
+    /* animasi */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
 
 
     footer {
@@ -259,13 +288,23 @@
 
   <!-- script JS -->
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const links = document.querySelectorAll('.nav-links a');
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+  // buka/tutup menu pas klik hamburger
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // nutup menu setelah klik salah satu link
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
 
@@ -276,6 +315,7 @@
 
 </body>
 </html>
+
 
 
 
