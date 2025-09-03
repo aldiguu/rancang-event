@@ -22,14 +22,16 @@
     }
 
     header {
-      background: rgba(4, 19, 42, 0.9);
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+  background: rgba(4, 19, 42, 0.9);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;   /* bikin header nempel di atas */
+  top: 0;
+  left: 0;
+  width: 100%;       /* full lebar layar */
+  z-index: 1000;     /* biar gak ketiban konten lain */
     }
     .logo img {
       height: 120px;
@@ -327,6 +329,7 @@
 
 </body>
 </html>
+
 
 
 
