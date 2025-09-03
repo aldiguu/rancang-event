@@ -96,27 +96,22 @@
       border-radius: 10px;
     }
 
-    .contact form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .contact input, .contact textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-    .contact button {
-      background: #ce6e55;
-      color: #fff;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .contact button:hover { background: #759ab7; }
+   .contact-info {
+  background: rgba(4, 19, 42, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+.contact-info strong {
+  color: #ce6e55;
+}
+
 
     footer {
       background: #04132a;
@@ -182,15 +177,15 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <p><strong>Email:</strong> 00@gmail.com</p>
+    <p><strong>Phone:</strong> +62 000000</p>
+    <p><strong>Address:</strong> Jl.00n, Indonesia</p>
+  </div>
+</section>
+
 
   <footer>
     <p>&copy; 2025 Merancang | Event & Creative. All rights reserved.</p>
@@ -198,5 +193,6 @@
 
 </body>
 </html>
+
 
 
