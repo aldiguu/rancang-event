@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merancang | Event & Creative</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Rancangevent-LOGO.png">
+  <style>
+    @font-face {
+      font-family: 'Adigiyana Toybox';
+      src: url('AdigiyanaToybox.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+	   }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+	  font-family: 'Adigiyana Toybox', sans-serif;
+      background: linear-gradient(135deg, #759ab7, #ce6e55, #04132a);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(4, 19, 42, 0.9);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo img {
+      height: 50px; /* bisa kamu sesuaikan */
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #759ab7;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #fff; }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 { font-size: 2.5em; margin-bottom: 20px; }
+    .hero p { margin-bottom: 30px; font-size: 1.2em; }
+    .hero button {
+      background: #ce6e55;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .hero button:hover { background: #759ab7; }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section h2 { color: #04132a; font-size: 2em; margin-bottom: 20px; }
+    section p { max-width: 800px; margin: auto; }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .service {
+      background: rgba(4, 19, 42, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      color: #fff;
+    }
+    .service h3 { margin-bottom: 10px; color: #ce6e55; }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .portfolio div {
+      background: #759ab7;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .contact button {
+      background: #ce6e55;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact button:hover { background: #759ab7; }
+
+    footer {
+      background: #04132a;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="Rancangevent-LOGO.png" alt="Merancang Logo">
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>We Design. We Create. We Manage.</h2>
+    <p>Professional Event & Creative Solutions for Your Brand and Space</p>
+    <button>Let’s Work Together</button>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Merancang | Event & Creative adalah perusahaan yang bergerak di bidang
+      desain event, interior, dan manajemen acara. Kami hadir untuk
+      memberikan solusi kreatif yang sesuai dengan kebutuhan Anda, baik
+      untuk pameran, acara korporat, maupun kebutuhan pribadi.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Event Design</h3>
+        <p>Desain booth, layout pameran, dan elemen kreatif lainnya yang
+        menarik perhatian audiens.</p>
+      </div>
+      <div class="service">
+        <h3>Interior Design</h3>
+        <p>Rancangan interior modern, fungsional, dan estetis untuk ruang
+        kerja maupun pribadi.</p>
+      </div>
+      <div class="service">
+        <h3>Event Management</h3>
+        <p>Perencanaan dan pengelolaan acara dari awal hingga akhir, agar
+        berjalan lancar dan sukses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <p>Berikut beberapa contoh hasil karya kami.</p>
+    <div class="portfolio">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Merancang | Event & Creative. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
