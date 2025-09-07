@@ -63,6 +63,9 @@
             padding: 60px 20px;
             text-align: center;
         }
+        /* Mengatasi masalah judul tertutup header */
+        #career { padding-top: 100px; }
+        
         section h2 { color: #04132a; font-size: 2em; margin-bottom: 20px; }
         section p { max-width: 800px; margin: auto; }
         .services {
@@ -91,7 +94,8 @@
             height: 200px;
             border-radius: 10px;
         }
-        .contact-info {
+        /* Mengubah tampilan kontak agar terlihat seperti footer */
+        .footer-contact {
             background: rgba(4, 19, 42, 0.8);
             padding: 20px;
             border-radius: 10px;
@@ -99,19 +103,16 @@
             margin: auto;
             text-align: center;
         }
-        .contact-info p {
+        .footer-contact p {
             margin: 10px 0;
             font-size: 1.1em;
         }
-        .contact-info strong {
-            color: #ce6e55;
-        }
-        .contact-info a {
+        .footer-contact a {
             color: #ce6e55;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        .contact-info a:hover {
+        .footer-contact a:hover {
             color: #fff;
         }
         .btn {
@@ -220,11 +221,11 @@
             </div>
         </nav>
     </header>
-    <section id="career" style="padding-top: 100px;">
+    <section id="career">
         <h2>Career</h2>
         <p>Halaman ini sedang dalam pengembangan. Silakan cek kembali nanti untuk informasi lowongan kerja.</p>
     </section>
-    <section id="contact" class="contact">
+    <div class="footer-contact">
         <h2>Contact Us</h2>
         <div class="contact-info">
             <p>
@@ -239,7 +240,7 @@
                 </a>
             </p>
         </div>
-    </section>
+    </div>
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
