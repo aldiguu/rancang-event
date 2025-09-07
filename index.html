@@ -329,3 +329,121 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                ☰
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>We Design. We Create. We Manage.</h2>
+        <p>Event & Creative Solutions for Your Brand and Space</p>
+        <a href="https://wa.me/6288905450560" target="_blank" class="btn">
+            Let's Work Together
+        </a>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Event Design</h3>
+                <p>Booth design, exhibition layout, and other creative elements that attract the audience's attention.</p>
+            </div>
+            <div class="service">
+                <h3>Interior Design</h3>
+                <p>Interior design, functional and aesthetic for both work and personal spaces.</p>
+            </div>
+            <div class="service">
+                <h3>Event Management</h3>
+                <p>Planning and managing events from start to finish, to ensure it runs successfully.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Our Portfolio</h2>
+        <p>Here are some examples of our work.</p>
+        <div class="portfolio">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-column">
+            <div class="menu-group">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-column">
+            <p class="footer-text">We Design. We Create. We Manage.</p>
+        </div>
+        <div class="footer-column contact-info-column">
+            <h3>Contact Info</h3>
+            <ul>
+                <li>
+                    <a href="mailto:Rancangevent@gmail.com">Rancangevent@gmail.com</a>
+                </li>
+                <li>
+                    <a href="https://wa.me/6288905450560" target="_blank">WhatsApp: +62 889-0545-0560</a>
+                </li>
+                <li>
+                    <a href="https://maps.google.com/?q=Jakarta Selatan, Indonesia" target="_blank">
+                        Jakarta Selatan, Indonesia
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright-section">
+        <p>© 2025 Merancang | Event & Creative. All rights reserved.</p>
+    </div>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links a');
+
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            if (navLinks.classList.contains('active')) {
+                hamburger.innerHTML = 'Menu';
+            } else {
+                hamburger.innerHTML = '☰';
+            }
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '☰';
+            });
+        });
+
+        document.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '☰';
+            }
+        });
+
+        navLinks.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>
