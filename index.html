@@ -139,7 +139,7 @@
             gap: 30px;
             
             /* Latar belakang gambar siluet */
-            background-image: url('GambarFooter.png'); /* Nama file gambar yang diperbarui */
+            background-image: url('GambarFooter.png');
             background-size: 100% 100px; /* Sesuaikan tinggi sesuai keinginan, di sini 100px */
             background-position: top center;
             background-repeat: no-repeat;
@@ -226,7 +226,7 @@
             .nav-links {
                 display: flex;
                 flex-direction: column;
-                background: transparent; /* Keep transparent, or add a solid color if preferred */
+                background: transparent;
                 position: absolute;
                 top: 70px;
                 right: 0;
@@ -250,7 +250,7 @@
                 font-weight: bold;
                 text-align: right;
                 padding: 10px 15px;
-                background-color: #04132a; /* Background for mobile menu items */
+                background-color: #04132a;
                 border-radius: 5px;
                 transition: background-color 0.3s ease;
             }
@@ -265,8 +265,8 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                background-size: 100% 80px; /* Adjust silhouette height for mobile */
-                padding-top: 80px; /* Adjust padding-top for mobile silhouette */
+                background-size: 100% 80px;
+                padding-top: 80px;
             }
             .footer-column {
                 min-width: unset;
@@ -274,10 +274,10 @@
                 padding-left: 0;
             }
             .footer-column::before {
-                display: none; /* Hide vertical lines on mobile */
+                display: none;
             }
             .footer-column.center-text {
-                text-align: center; /* Pastikan di tengah untuk mobile */
+                text-align: center;
             }
         }
     </style>
@@ -364,45 +364,3 @@
                     <a href="https://maps.google.com/?q=Jakarta Selatan, Indonesia" target="_blank">
                         Jakarta Selatan, Indonesia
                     </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-    <div class="copyright-section">
-        <p>© 2025 Merancang | Event & Creative. All rights reserved.</p>
-    </div>
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const links = document.querySelectorAll('.nav-links a');
-
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navLinks.classList.toggle('active');
-            if (navLinks.classList.contains('active')) {
-                hamburger.innerHTML = 'Menu';
-            } else {
-                hamburger.innerHTML = '☰';
-            }
-        });
-
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.innerHTML = '☰';
-            });
-        });
-
-        document.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                hamburger.innerHTML = '☰';
-            }
-        });
-
-        navLinks.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-    </script>
-</body>
-</html>
