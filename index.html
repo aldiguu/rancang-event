@@ -45,7 +45,6 @@
         .hero {
             text-align: center;
             padding: 100px 20px;
-            /* Mengatasi masalah judul tertutup header */
             padding-top: 100px;
         }
         .hero h2 { font-size: 2.5em; margin-bottom: 20px; }
@@ -65,7 +64,6 @@
             padding: 60px 20px;
             text-align: center;
         }
-        /* Mengatasi masalah judul tertutup header */
         #services { padding-top: 100px; }
         #portfolio { padding-top: 100px; }
         
@@ -97,26 +95,55 @@
             height: 200px;
             border-radius: 10px;
         }
-        /* Mengubah tampilan kontak agar terlihat seperti footer */
-        .footer-contact {
-            background: rgba(4, 19, 42, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 400px;
-            margin: auto;
-            text-align: center;
+        /* Styling footer baru */
+        footer {
+            background: linear-gradient(135deg, #ce6e55, #759ab7, #04132a);
+            color: #fff;
+            padding: 60px 20px 20px;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
         }
-        .footer-contact p {
-            margin: 10px 0;
-            font-size: 1.1em;
+        footer .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
         }
-        .footer-contact a {
+        footer .footer-column h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
             color: #ce6e55;
+        }
+        footer .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        footer .footer-column a {
+            color: #fff;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        .footer-contact a:hover {
+        footer .footer-column a:hover {
+            color: #759ab7;
+        }
+        footer .footer-text {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+        .copyright-section {
+            background: #04132a;
             color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 0.9em;
+            width: 100%;
+            margin-top: 20px;
         }
         .btn {
             display: inline-block;
@@ -195,13 +222,16 @@
                 display: block;
                 font-weight: bold;
             }
-        }
-        footer {
-            background: linear-gradient(135deg, #ce6e55, #759ab7, #04132a);
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
+            footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            footer .footer-column {
+                min-width: unset;
+                width: 100%;
+                max-width: 400px;
+            }
         }
     </style>
 </head>
@@ -257,21 +287,42 @@
             <div></div>
         </div>
     </section>
-    <div class="footer-contact">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p>
-                <a href="mailto:Rancangevent@gmail.com">Rancangevent@gmail.com</a>
-            </p>
-            <p>
-                <a href="https://wa.me/6288905450560" target="_blank">WhatsApp</a>
-            </p>
-            <p>
-                <a href="https://maps.google.com/?q=Jakarta Selatan, Indonesia" target="_blank">
-                    Jakarta Selatan, Indonesia
-                </a>
-            </p>
+    
+    <footer>
+        <div class="footer-column">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
+        <div class="footer-column">
+            <h3>Our Motto</h3>
+            <p class="footer-text">We Design. We Create. We Manage.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul>
+                <li>
+                    <a href="mailto:Rancangevent@gmail.com">Rancangevent@gmail.com</a>
+                </li>
+                <li>
+                    <a href="https://wa.me/6288905450560" target="_blank">WhatsApp: +62 889-0545-0560</a>
+                </li>
+                <li>
+                    <a href="https://maps.google.com/?q=Jakarta Selatan, Indonesia" target="_blank">
+                        Jakarta Selatan, Indonesia
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright-section">
+        <p>© 2025 Merancang | Event & Creative. All rights reserved.</p>
     </div>
     <script>
         const hamburger = document.querySelector('.hamburger');
@@ -302,8 +353,5 @@
             e.stopPropagation();
         });
     </script>
-    <footer>
-        <p>© 2025 Merancang | Event & Creative. All rights reserved.</p>
-    </footer>
 </body>
 </html>
