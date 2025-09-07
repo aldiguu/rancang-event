@@ -14,11 +14,16 @@
             font-style: normal;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            height: 100%;
+        }
         body {
             font-family: 'Adigiyana Toybox', sans-serif;
             background: linear-gradient(135deg, #759ab7, #ce6e55, #04132a);
             color: #fff;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Header Styles */
@@ -63,7 +68,8 @@
         }
 
         /* General Section Styles */
-        section {
+        main {
+            flex: 1;
             padding: 60px 20px;
             text-align: center;
         }
@@ -84,8 +90,6 @@
             position: relative;
             flex-wrap: nowrap;
         }
-
-        /* Garis horizontal di paling atas footer */
         footer::before {
             content: '';
             position: absolute;
@@ -96,46 +100,36 @@
             background-color: #fff;
             opacity: 0.2;
         }
-
-        /* Font profesional untuk footer */
         footer *, footer a {
             font-family: Arial, sans-serif;
         }
-
         footer h3 {
             font-size: 1.5em;
             margin-bottom: 20px;
             color: #ce6e55;
         }
-
-        /* Kustomisasi untuk menu di kolom kiri */
         .footer-column .menu-group {
             display: flex;
             justify-content: center;
             gap: 40px;
         }
-
         .footer-column .menu-group ul {
             list-style: none;
             padding: 0;
             margin: 0;
             text-align: left;
         }
-
         .footer-column ul li {
             margin-bottom: 10px;
         }
-
         footer a {
             color: #fff;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-
         footer a:hover {
             color: #759ab7;
         }
-
         .footer-column {
             flex-grow: 1;
             min-width: 200px;
@@ -146,8 +140,6 @@
             flex-direction: column;
             justify-content: center;
         }
-
-        /* Garis vertikal di antara kolom */
         .footer-column:nth-child(2)::before {
             content: '';
             position: absolute;
@@ -168,16 +160,12 @@
             background-color: #fff;
             opacity: 0.2;
         }
-
-        /* Teks motto di tengah */
         .footer-text {
             font-size: 1.1em;
             max-width: 300px;
             margin: 0 auto;
             line-height: 1.8;
         }
-
-        /* Kustomisasi untuk Contact Info */
         .footer-column.contact-info-column {
             align-items: flex-start;
             text-align: left;
@@ -189,7 +177,6 @@
             display: block;
             margin-bottom: 5px;
         }
-
         .copyright-section {
             background: #04132a;
             color: #fff;
@@ -199,8 +186,6 @@
             width: 100%;
             margin-top: 0;
         }
-
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .nav-links {
                 display: flex;
@@ -292,10 +277,13 @@
             </div>
         </nav>
     </header>
-    <section id="career-content">
-        <h2>Career Opportunities</h2>
-        <p>This is the Career page content. You can list available job openings here.</p>
-    </section>
+
+    <main>
+        <section id="career-content">
+            <h2>Career Opportunities</h2>
+            <p>This is the Career page content. You can list available job openings here.</p>
+        </section>
+    </main>
     
     <footer>
         <div class="footer-column">
@@ -362,8 +350,8 @@
         });
 
         navLinks.addEventListener('click', (e) => {
-    e.stopPropagation();
-});
+            e.stopPropagation();
+        });
     </script>
 </body>
 </html>
