@@ -132,10 +132,11 @@
             color: #fff;
             padding: 40px 20px 20px;
             display: flex;
+            flex-wrap: wrap; /* Mengaktifkan wrap untuk responsivitas */
             justify-content: space-around;
             align-items: center;
+            gap: 30px;
             position: relative;
-            flex-wrap: nowrap; /* Mencegah kolom menjadi vertikal di layar kecil */
         }
 
         /* Garis horizontal di paling atas footer */
@@ -190,9 +191,10 @@
         }
 
         .footer-column {
-            flex-grow: 1; /* Biarkan kolom tumbuh */
+            flex: 1;
             min-width: 200px;
             padding: 0 20px;
+            margin-bottom: 20px;
             position: relative;
             text-align: center;
             display: flex;
@@ -221,12 +223,27 @@
             background-color: #fff;
             opacity: 0.2;
         }
-
+        .footer-column:first-child::before,
+        .footer-column:last-child::before {
+            display: none;
+        }
+        .footer-column:nth-child(2)::before,
+        .footer-column:last-child::before {
+             display: block; /* Memastikan garis vertikal tetap ada di desktop */
+        }
+        
+        /* Teks motto di tengah */
+        .footer-text {
+            font-size: 1.1em;
+            max-width: 300px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
         /* Kustomisasi untuk Contact Info */
         .footer-column.contact-info-column {
             align-items: flex-start;
-            text-align: left; /* Teks rata kiri */
-            /* Judul "Contact Info" dihapus dari HTML, jadi ini tidak lagi diperlukan */
+            text-align: left;
         }
         .footer-column.contact-info-column p {
             margin: 0;
@@ -234,12 +251,6 @@
         .footer-column.contact-info-column a {
             display: block;
             margin-bottom: 5px;
-        }
-        
-        /* CSS tambahan untuk meratakan tengah p pada kolom tengah */
-        .footer-column:nth-child(2) p {
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .copyright-section {
@@ -291,6 +302,36 @@
             .hamburger {
                 display: block;
                 font-weight: bold;
+            }
+            
+            /* Footer Responsive Styles */
+            footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding-top: 30px;
+            }
+            footer::before {
+                top: 0;
+            }
+            .footer-column {
+                min-width: unset;
+                width: 100%;
+                padding: 0;
+            }
+            .footer-column::before, .footer-column::after {
+                display: none;
+            }
+            .footer-column .menu-group {
+                flex-direction: column;
+                gap: 0;
+            }
+            .footer-column .menu-group ul {
+                text-align: center;
+            }
+            .footer-column.contact-info-column {
+                text-align: center;
+                align-items: center;
             }
         }
     </style>
