@@ -191,17 +191,30 @@
     transform: translateX(0);
   }
 
+  /* Styling baru untuk link (tombol menu) */
   .nav-links li {
-    margin: 10px 0;
+    margin: 0;
   }
 
   .nav-links a {
+    display: block;
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px; /* Memberi ruang di dalam tombol */
+    background-color: #04132a; /* Memberi latar belakang biru tua */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: #ce6e55; /* Warna saat tombol disentuh */
   }
 
   .hamburger {
     display: block;
+    font-weight: bold;
   }
 }
 
@@ -297,31 +310,44 @@
  <!-- script JS -->
 <script>
   const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  const links = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links a');
 
-  // buka/tutup menu pas klik hamburger
-  hamburger.addEventListener('click', (e) => {
-    e.stopPropagation(); // cegah klik tembus ke document
-    navLinks.classList.toggle('active');
-  });
+// buka/tutup menu pas klik hamburger
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation(); // cegah klik tembus ke document
+  navLinks.classList.toggle('active');
 
-  // nutup menu setelah klik salah satu link
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-    });
-  });
+  // Mengubah teks hamburger berdasarkan status menu
+  if (navLinks.classList.contains('active')) {
+    hamburger.innerHTML = 'Menu';
+  } else {
+    hamburger.innerHTML = '☰';
+  }
+});
 
-  // kalau klik di luar menu -> nutup
-  document.addEventListener('click', () => {
+// nutup menu setelah klik salah satu link
+links.forEach(link => {
+  link.addEventListener('click', () => {
     navLinks.classList.remove('active');
+    // Mengembalikan teks hamburger saat menu ditutup
+    hamburger.innerHTML = '☰';
   });
+});
 
-  // cegah klik di dalam menu langsung nutup
-  navLinks.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
+// kalau klik di luar menu -> nutup
+document.addEventListener('click', () => {
+  if (navLinks.classList.contains('active')) {
+    navLinks.classList.remove('active');
+    // Mengembalikan teks hamburger saat menu ditutup
+    hamburger.innerHTML = '☰';
+  }
+});
+
+// cegah klik di dalam menu langsung nutup
+navLinks.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
 </script>
 
 
@@ -335,6 +361,7 @@
 
 </body>
 </html>
+
 
 
 
