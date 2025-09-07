@@ -132,10 +132,8 @@
             color: #fff;
             padding: 40px 20px 20px;
             display: flex;
-            flex-wrap: wrap; /* Mengaktifkan wrap untuk responsivitas */
             justify-content: space-around;
             align-items: center;
-            gap: 30px;
             position: relative;
         }
 
@@ -191,10 +189,9 @@
         }
 
         .footer-column {
-            flex: 1;
+            flex-grow: 1;
             min-width: 200px;
             padding: 0 20px;
-            margin-bottom: 20px;
             position: relative;
             text-align: center;
             display: flex;
@@ -223,15 +220,7 @@
             background-color: #fff;
             opacity: 0.2;
         }
-        .footer-column:first-child::before,
-        .footer-column:last-child::before {
-            display: none;
-        }
-        .footer-column:nth-child(2)::before,
-        .footer-column:last-child::before {
-             display: block; /* Memastikan garis vertikal tetap ada di desktop */
-        }
-        
+
         /* Teks motto di tengah */
         .footer-text {
             font-size: 1.1em;
@@ -239,7 +228,7 @@
             margin: 0 auto;
             line-height: 1.8;
         }
-        
+
         /* Kustomisasi untuk Contact Info */
         .footer-column.contact-info-column {
             align-items: flex-start;
@@ -303,13 +292,13 @@
                 display: block;
                 font-weight: bold;
             }
-            
-            /* Footer Responsive Styles */
             footer {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
                 padding-top: 30px;
+                flex-wrap: wrap;
+                gap: 30px;
             }
             footer::before {
                 top: 0;
