@@ -6,6 +6,8 @@
     <title>Home | Rancang Event & Creative</title>
     <link rel="icon" type="image/png" href="Rancangevent-LOGO.png">
     <style>
+        /* [MASUKKAN KODE CSS LENGKAP DARI BAGIAN ATAS SINI] */
+
         /* Global Styles */
         @font-face {
             font-family: 'Adigiyana Toybox';
@@ -66,7 +68,7 @@
         .hero {
             text-align: center;
             padding: 100px 20px;
-            padding-top: 100px; /* Adjust for fixed header */
+            padding-top: 100px;
         }
         .hero h2 { font-size: 2.5em; margin-bottom: 20px; }
         .hero p { margin-bottom: 30px; font-size: 1.2em; }
@@ -90,7 +92,6 @@
             padding: 60px 20px;
             text-align: center;
         }
-        /* Adjust padding-top for fixed header for specific sections */
         #services { padding-top: 100px; }
         #portfolio { padding-top: 100px; }
         
@@ -122,38 +123,36 @@
             margin-top: 40px;
         }
         .portfolio div {
-            background: #759ab7; /* Placeholder for portfolio items */
+            background: #759ab7;
             height: 200px;
             border-radius: 10px;
         }
 
         /* Footer Professional Styles */
         footer {
-            background-color: #04132a; /* Warna dasar footer: biru gelap */
+            background-color: #04132a;
             color: #fff;
-            padding: 100px 20px 20px; /* Padding untuk ruang gambar siluet */
+            padding: 100px 20px 20px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-items: flex-start; /* Elemen rata atas */
+            align-items: flex-start;
             gap: 30px;
-            
-            /* Latar belakang gambar siluet */
             background-image: url('GambarFooter.png');
-            background-size: 100% 100px; /* Sesuaikan tinggi sesuai keinginan, di sini 100px */
+            background-size: 100% 100px;
             background-position: top center;
             background-repeat: no-repeat;
         }
 
         /* Font profesional untuk footer */
         footer *, footer a {
-            font-family: Arial, sans-serif; /* Mengubah font semua elemen di footer */
+            font-family: Arial, sans-serif;
         }
 
         footer h3 {
             font-size: 1.5em;
             margin-bottom: 20px;
-            color: #ce6e55; /* Warna judul kolom tetap oranye */
+            color: #ce6e55;
         }
 
         footer ul {
@@ -177,8 +176,8 @@
 
         .footer-column {
             flex: 1;
-            min-width: 200px; /* Atur lebar minimum */
-            padding-left: 20px; /* Jarak untuk garis vertikal */
+            min-width: 200px;
+            padding-left: 20px;
             margin-bottom: 20px;
             position: relative;
         }
@@ -191,8 +190,8 @@
             left: 0;
             width: 1px;
             height: 100%;
-            background-color: #fff; /* Warna garis putih */
-            opacity: 0.2; /* Transparansi agar tidak terlalu mencolok */
+            background-color: #fff;
+            opacity: 0.2;
         }
 
         /* Penyesuaian untuk kolom tengah agar teksnya rata tengah */
@@ -200,9 +199,8 @@
             text-align: center;
         }
         .footer-column.center-text .footer-text {
-            margin: 0 auto; /* Tengah teks di kolom tengah */
+            margin: 0 auto;
         }
-
 
         /* Teks motto di tengah */
         .footer-text {
@@ -364,3 +362,45 @@
                     <a href="https://maps.google.com/?q=Jakarta Selatan, Indonesia" target="_blank">
                         Jakarta Selatan, Indonesia
                     </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright-section">
+        <p>© 2025 Merancang | Event & Creative. All rights reserved.</p>
+    </div>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links a');
+
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            if (navLinks.classList.contains('active')) {
+                hamburger.innerHTML = 'Menu';
+            } else {
+                hamburger.innerHTML = '☰';
+            }
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '☰';
+            });
+        });
+
+        document.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '☰';
+            }
+        });
+
+        navLinks.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>
