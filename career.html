@@ -1,713 +1,357 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Career | Rancang Event & Creative</title>
-
-    <link rel="icon" type="image/png" href="Rancangevent-LOGO.png">
-
-    <style>
-
-        /* Global Styles */
-
-        @font-face {
-
-            font-family: 'Adigiyana Toybox';
-
-            src: url('AdigiyanaToybox.ttf') format('truetype');
-
-            font-weight: normal;
-
-            font-style: normal;
-
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html, body {
-
-            height: 100%;
-
-        }
-
-        body {
-
-            font-family: 'Adigiyana Toybox', sans-serif;
-
-            background: linear-gradient(135deg, #759ab7, #ce6e55, #04132a);
-
-            color: #fff;
-
-            line-height: 1.6;
-
-            display: flex;
-
-            flex-direction: column;
-
-        }
-
-
-
-        /* Header Styles */
-
-        header {
-
-            background: linear-gradient(135deg, #759ab7, #04132a, #ce6e55);
-
-            padding: 10px 40px;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            position: fixed;
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            z-index: 1000;
-
-        }
-
-        .logo img {
-
-            height: 60px;
-
-        }
-
-        .nav-links {
-
-            list-style: none;
-
-            display: flex;
-
-            gap: 20px;
-
-            align-items: center;
-
-        }
-
-        .nav-links li {
-
-            margin: 0;
-
-        }
-
-        .nav-links a {
-
-            color: #fff;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-            transition: 0.3s;
-
-        }
-
-        .nav-links a:hover {
-
-            color: #759ab7;
-
-        }
-
-        .hamburger {
-
-            display: none;
-
-            font-size: 30px;
-
-            cursor: pointer;
-
-            color: white;
-
-        }
-
-
-
-        /* General Section Styles */
-
-        main {
-
-            flex: 1;
-
-            padding: 60px 20px;
-
-            text-align: center;
-
-        }
-
-        #career-content {
-
-            padding-top: 100px;
-
-        }
-
-        section h2 { color: #04132a; font-size: 2em; margin-bottom: 20px; }
-
-        section p { max-width: 800px; margin: auto; }
-
-
-
-        /* Footer Professional Styles */
-
-        footer {
-
-            background: transparent;
-
-            color: #fff;
-
-            padding: 40px 20px 20px;
-
-            display: flex;
-
-            justify-content: space-around;
-
-            align-items: stretch;
-
-            position: relative;
-
-            flex-wrap: nowrap;
-
-        }
-
-        footer::before {
-
-            content: '';
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            height: 1px;
-
-            background-color: #fff;
-
-            opacity: 0.2;
-
-        }
-
-        footer *, footer a {
-
-            font-family: Arial, sans-serif;
-
-        }
-
-        footer h3 {
-
-            font-size: 1.5em;
-
-            margin-bottom: 20px;
-
-            color: #ce6e55;
-
-        }
-
-        .footer-column .menu-group {
-
-            display: flex;
-
-            justify-content: center;
-
-            gap: 40px;
-
-        }
-
-        .footer-column .menu-group ul {
-
-            list-style: none;
-
-            padding: 0;
-
-            margin: 0;
-
-            text-align: left;
-
-        }
-
-        .footer-column ul li {
-
-            margin-bottom: 10px;
-
-        }
-
-        footer a {
-
-            color: #fff;
-
-            text-decoration: none;
-
-            transition: color 0.3s ease;
-
-        }
-
-        footer a:hover {
-
-            color: #759ab7;
-
-        }
-
-        .footer-column {
-
-            flex-grow: 1;
-
-            min-width: 200px;
-
-            padding: 0 20px;
-
-            position: relative;
-
-            text-align: center;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-        }
-
-        .footer-column:nth-child(2)::before {
-
-            content: '';
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-            width: 1px;
-
-            height: 100%;
-
-            background-color: #fff;
-
-            opacity: 0.2;
-
-        }
-
-        .footer-column:last-child::before {
-
-            content: '';
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-            width: 1px;
-
-            height: 100%;
-
-            background-color: #fff;
-
-            opacity: 0.2;
-
-        }
-
-        .footer-text {
-
-            font-size: 1.1em;
-
-            max-width: 300px;
-
-            margin: 0 auto;
-
-            line-height: 1.8;
-
-        }
-
-        .footer-column.contact-info-column {
-
-            align-items: flex-start;
-
-            text-align: left;
-
-        }
-
-        .footer-column.contact-info-column p {
-
-            margin: 0;
-
-        }
-
-        .footer-column.contact-info-column a {
-
-            display: block;
-
-            margin-bottom: 5px;
-
-        }
-
-        .copyright-section {
-
-            background: #04132a;
-
-            color: #fff;
-
-            padding: 15px 20px;
-
-            text-align: center;
-
-            font-size: 0.9em;
-
-            width: 100%;
-
-            margin-top: 0;
-
-        }
-
-        @media (max-width: 768px) {
-
-            .nav-links {
-
-                display: flex;
-
-                flex-direction: column;
-
-                background: transparent;
-
-                position: absolute;
-
-                top: 70px;
-
-                right: 0;
-
-                width: 200px;
-
-                padding: 20px;
-
-                border-radius: 8px;
-
-                gap: 15px;
-
-                transform: translateX(100%);
-
-                transition: transform 0.3s ease-in-out;
-
-            }
-
-            .nav-links.active {
-
-                transform: translateX(0);
-
-            }
-
-            .nav-links li {
-
-                margin: 0;
-
-            }
-
-            .nav-links a {
-
-                display: block;
-
-                color: #fff;
-
-                text-decoration: none;
-
-                font-weight: bold;
-
-                text-align: right;
-
-                padding: 10px 15px;
-
-                background-color: #04132a;
-
-                border-radius: 5px;
-
-                transition: background-color 0.3s ease;
-
-            }
-
-            .nav-links a:hover {
-
-                background-color: #ce6e55;
-
-            }
-
-            .hamburger {
-
-                display: block;
-
-                font-weight: bold;
-
-            }
-
-            footer {
-
-                flex-direction: column;
-
-                align-items: center;
-
-                text-align: center;
-
-                padding-top: 30px;
-
-                flex-wrap: wrap;
-
-                gap: 30px;
-
-            }
-
-            footer::before {
-
-                top: 0;
-
-            }
-
-            .footer-column {
-
-                min-width: unset;
-
-                width: 100%;
-
-                padding: 0;
-
-            }
-
-            .footer-column::before, .footer-column::after {
-
-                display: none;
-
-            }
-
-            .footer-column .menu-group {
-
-                flex-direction: column;
-
-                gap: 0;
-
-            }
-
-            .footer-column .menu-group ul {
-
-                text-align: center;
-
-            }
-
-            .footer-column.contact-info-column {
-
-                text-align: center;
-
-                align-items: center;
-
-            }
-
-        }
-
-    </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career | Rancang Event & Creative</title>
+    <link rel="icon" type="image/png" href="Rancangevent-LOGO.png">
+    <style>
+        /* Global Styles */
+        @font-face {
+            font-family: 'Adigiyana Toybox';
+            src: url('AdigiyanaToybox.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: 'Adigiyana Toybox', sans-serif;
+            background: linear-gradient(135deg, #759ab7, #ce6e55, #04132a);
+            color: #fff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #759ab7, #04132a, #ce6e55);
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .logo img {
+            height: 60px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .nav-links li {
+            margin: 0;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #759ab7;
+        }
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* General Section Styles */
+        main {
+            flex: 1;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #career-content {
+            padding-top: 100px;
+        }
+        section h2 { color: #04132a; font-size: 2em; margin-bottom: 20px; }
+        section p { max-width: 800px; margin: auto; }
+
+        /* Footer Professional Styles */
+        footer {
+            background: transparent;
+            color: #fff;
+            padding: 40px 20px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            position: relative;
+            flex-wrap: nowrap;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            opacity: 0.2;
+        }
+        footer *, footer a {
+            font-family: Arial, sans-serif;
+        }
+        footer h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #ce6e55;
+        }
+        .footer-column .menu-group {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        .footer-column .menu-group ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #759ab7;
+        }
+        .footer-column {
+            flex-grow: 1;
+            min-width: 200px;
+            padding: 0 20px;
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .footer-column:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.2;
+        }
+        .footer-column:last-child::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.2;
+        }
+        .footer-text {
+            font-size: 1.1em;
+            max-width: 300px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .footer-column.contact-info-column {
+            align-items: flex-start;
+            text-align: left;
+        }
+        .footer-column.contact-info-column p {
+            margin: 0;
+        }
+        .footer-column.contact-info-column a {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .copyright-section {
+            background: #04132a;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 0.9em;
+            width: 100%;
+            margin-top: 0;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                background: transparent;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 200px;
+                padding: 20px;
+                border-radius: 8px;
+                gap: 15px;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            .nav-links.active {
+                transform: translateX(0);
+            }
+            .nav-links li {
+                margin: 0;
+            }
+            .nav-links a {
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                text-align: right;
+                padding: 10px 15px;
+                background-color: #04132a;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+            .nav-links a:hover {
+                background-color: #ce6e55;
+            }
+            .hamburger {
+                display: block;
+                font-weight: bold;
+            }
+            footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding-top: 30px;
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            footer::before {
+                top: 0;
+            }
+            .footer-column {
+                min-width: unset;
+                width: 100%;
+                padding: 0;
+            }
+            .footer-column::before, .footer-column::after {
+                display: none;
+            }
+            .footer-column .menu-group {
+                flex-direction: column;
+                gap: 0;
+            }
+            .footer-column .menu-group ul {
+                text-align: center;
+            }
+            .footer-column.contact-info-column {
+                text-align: center;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-    <header>
-
-        <div class="logo">
-
-            <img src="Rancangevent-LOGO.png" alt="Merancang Logo">
-
-        </div>
-
-        <nav>
-
-            <ul class="nav-links">
-
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="about.html">About</a></li>
-
-                <li><a href="services.html">Services</a></li>
-
-                <li><a href="portfolio.html">Portfolio</a></li>
-
-                <li><a href="career.html">Career</a></li>
-
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-
-            <div class="hamburger">
-
-                ☰
-
-            </div>
-
-        </nav>
-
-    </header>
-
-
-
-    <main>
-
-        <section id="career-content">
-
-            <h2>Career Opportunities</h2>
-
-            <p>This is the Career page content. You can list available job openings here.</p>
-
-        </section>
-
-    </main>
-
-    
-
-    <footer>
-
-        <div class="footer-column">
-
-            <div class="menu-group">
-
-                <ul>
-
-                    <li><a href="about.html">About</a></li>
-
-                    <li><a href="services.html">Services</a></li>
-
-                    <li><a href="portfolio.html">Portfolio</a></li>
-
-                </ul>
-
-                <ul>
-
-                    <li><a href="index.html">Home</a></li>
-
-                    <li><a href="career.html">Career</a></li>
-
-                    <li><a href="contact.html">Contact</a></li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="footer-column">
-
-            <p class="footer-text">We Design. We Create. We Manage.</p>
-
-        </div>
-
-        <div class="footer-column contact-info-column">
-
-            <p>
-
-                <a href="mailto:Rancangevent@gmail.com">Rancangevent@gmail.com</a>
-
-            </p>
-
-            <p>
-
-                <a href="https://wa.me/6288905450560" target="_blank">+62 889-0545-0560</a>
-
-            </p>
-
-            <p>
-
-                <a href="https://maps.google.com/?q=Jakarta Selatan, Indonesia" target="_blank">
-
-                   South Jakarta, Indonesia
-
-                </a>
-
-            </p>
-
-        </div>
-
-    </footer>
-
-    <div class="copyright-section">
-
-        <p>© 2025 Rancang | Event & Creative. All rights reserved.</p>
-
-    </div>
-
-    <script>
-
-        const hamburger = document.querySelector('.hamburger');
-
-        const navLinks = document.querySelector('.nav-links');
-
-        const links = document.querySelectorAll('.nav-links a');
-
-
-
-        hamburger.addEventListener('click', (e) => {
-
-            e.stopPropagation();
-
-            navLinks.classList.toggle('active');
-
-            if (navLinks.classList.contains('active')) {
-
-                hamburger.innerHTML = 'Menu';
-
-            } else {
-
-                hamburger.innerHTML = '☰';
-
-            }
-
-        });
-
-
-
-        links.forEach(link => {
-
-            link.addEventListener('click', () => {
-
-                navLinks.classList.remove('active');
-
-                hamburger.innerHTML = '☰';
-
-            });
-
-        });
-
-
-
-        document.addEventListener('click', () => {
-
-            if (navLinks.classList.contains('active')) {
-
-                navLinks.classList.remove('active');
-
-                hamburger.innerHTML = '☰';
-
-            }
-
-        });
-
-
-
-        navLinks.addEventListener('click', (e) => {
-
-            e.stopPropagation();
-
-        });
-
-    </script>
-
+    <header>
+        <div class="logo">
+            <img src="Rancangevent-LOGO.png" alt="Merancang Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                ☰
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="career-content">
+            <h2>Career Opportunities</h2>
+            <p>This is the Career page content. You can list available job openings here.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-column">
+            <div class="menu-group">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-column">
+            <p class="footer-text">We Design. We Create. We Manage.</p>
+        </div>
+        <div class="footer-column contact-info-column">
+            <p>
+                <a href="mailto:Rancangevent@gmail.com">Rancangevent@gmail.com</a>
+            </p>
+            <p>
+                <a href="https://wa.me/6288905450560" target="_blank">WhatsApp: +62 889-0545-0560</a>
+            </p>
+            <p>
+                <a href="https://maps.google.com/?q=Jakarta Selatan, Indonesia" target="_blank">
+                    Jakarta Selatan, Indonesia
+                </a>
+            </p>
+        </div>
+    </footer>
+    <div class="copyright-section">
+        <p>© 2025 Merancang | Event & Creative. All rights reserved.</p>
+    </div>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links a');
+
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            if (navLinks.classList.contains('active')) {
+                hamburger.innerHTML = 'Menu';
+            } else {
+                hamburger.innerHTML = '☰';
+            }
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '☰';
+            });
+        });
+
+        document.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '☰';
+            }
+        });
+
+        navLinks.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
 </body>
-
 </html>
