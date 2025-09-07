@@ -6,6 +6,7 @@
     <title>Home | Rancang Event & Creative</title>
     <link rel="icon" type="image/png" href="Rancangevent-LOGO.png">
     <style>
+        /* Global Styles */
         @font-face {
             font-family: 'Adigiyana Toybox';
             src: url('AdigiyanaToybox.ttf') format('truetype');
@@ -19,6 +20,8 @@
             color: #fff;
             line-height: 1.6;
         }
+
+        /* Header Styles */
         header {
             background: linear-gradient(135deg, #759ab7, #04132a, #ce6e55);
             padding: 10px 40px;
@@ -33,131 +36,6 @@
         }
         .logo img {
             height: 60px;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #759ab7;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        nav a:hover { color: #fff; }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            padding-top: 100px;
-        }
-        .hero h2 { font-size: 2.5em; margin-bottom: 20px; }
-        .hero p { margin-bottom: 30px; font-size: 1.2em; }
-        .hero button {
-            background: #ce6e55;
-            color: #fff;
-            padding: 12px 25px;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .hero button:hover { background: #759ab7; }
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        #services { padding-top: 100px; }
-        #portfolio { padding-top: 100px; }
-        
-        section h2 { color: #04132a; font-size: 2em; margin-bottom: 20px; }
-        section p { max-width: 800px; margin: auto; }
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        .service {
-            background: rgba(4, 19, 42, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            flex: 1 1 250px;
-            color: #fff;
-        }
-        .service h3 { margin-bottom: 10px; color: #ce6e55; }
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        .portfolio div {
-            background: #759ab7;
-            height: 200px;
-            border-radius: 10px;
-        }
-        /* Styling footer baru */
-        footer {
-            background: linear-gradient(135deg, #ce6e55, #759ab7, #04132a);
-            color: #fff;
-            padding: 60px 20px 20px;
-            text-align: left;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 30px;
-        }
-        footer .footer-column {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 20px;
-        }
-        footer .footer-column h3 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #ce6e55;
-        }
-        footer .footer-column ul {
-            list-style: none;
-            padding: 0;
-        }
-        footer .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        footer .footer-column a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        footer .footer-column a:hover {
-            color: #759ab7;
-        }
-        footer .footer-text {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            max-width: 300px;
-        }
-        .copyright-section {
-            background: #04132a;
-            color: #fff;
-            padding: 15px 20px;
-            text-align: center;
-            font-size: 0.9em;
-            width: 100%;
-            margin-top: 20px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #04132a;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #ce6e55;
         }
         .nav-links {
             list-style: none;
@@ -183,11 +61,172 @@
             cursor: pointer;
             color: white;
         }
+
+        /* Hero Section Styles */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            padding-top: 100px; /* Adjust for fixed header */
+        }
+        .hero h2 { font-size: 2.5em; margin-bottom: 20px; }
+        .hero p { margin-bottom: 30px; font-size: 1.2em; }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #04132a;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ce6e55;
+        }
+
+        /* General Section Styles */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        /* Adjust padding-top for fixed header for specific sections */
+        #services { padding-top: 100px; }
+        #portfolio { padding-top: 100px; }
+        
+        section h2 { color: #04132a; font-size: 2em; margin-bottom: 20px; }
+        section p { max-width: 800px; margin: auto; }
+
+        /* Services Section Styles */
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .service {
+            background: rgba(4, 19, 42, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1 1 250px;
+            color: #fff;
+        }
+        .service h3 { margin-bottom: 10px; color: #ce6e55; }
+
+        /* Portfolio Section Styles */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .portfolio div {
+            background: #759ab7; /* Placeholder for portfolio items */
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        /* Footer Professional Styles */
+        footer {
+            background-color: #04132a; /* Warna dasar footer: biru gelap */
+            color: #fff;
+            padding: 100px 20px 20px; /* Padding untuk ruang gambar siluet */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start; /* Elemen rata atas */
+            gap: 30px;
+            
+            /* Latar belakang gambar siluet */
+            background-image: url('GambarFooter.png');
+            background-size: 100% 100px; /* Sesuaikan tinggi sesuai keinginan, di sini 100px */
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+
+        /* Font profesional untuk footer */
+        footer *, footer a {
+            font-family: Arial, sans-serif; /* Mengubah font semua elemen di footer */
+        }
+
+        footer h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #ce6e55; /* Warna judul kolom tetap oranye */
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #759ab7;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px; /* Atur lebar minimum */
+            padding-left: 20px; /* Jarak untuk garis vertikal */
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        /* Garis vertikal di antara kolom */
+        .footer-column:not(:first-child)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #fff; /* Warna garis putih */
+            opacity: 0.2; /* Transparansi agar tidak terlalu mencolok */
+        }
+
+        /* Penyesuaian untuk kolom tengah agar teksnya rata tengah */
+        .footer-column.center-text {
+            text-align: center;
+        }
+        .footer-column.center-text .footer-text {
+            margin: 0 auto; /* Tengah teks di kolom tengah */
+        }
+
+
+        /* Teks motto di tengah */
+        .footer-text {
+            font-size: 1.1em;
+            max-width: 300px;
+            line-height: 1.8;
+        }
+
+        .copyright-section {
+            background: #04132a;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 0.9em;
+            width: 100%;
+            margin-top: 0;
+        }
+
+        /* Responsive Styles */
         @media (max-width: 768px) {
             .nav-links {
                 display: flex;
                 flex-direction: column;
-                background: transparent;
+                background: transparent; /* Keep transparent, or add a solid color if preferred */
                 position: absolute;
                 top: 70px;
                 right: 0;
@@ -211,7 +250,7 @@
                 font-weight: bold;
                 text-align: right;
                 padding: 10px 15px;
-                background-color: #04132a;
+                background-color: #04132a; /* Background for mobile menu items */
                 border-radius: 5px;
                 transition: background-color 0.3s ease;
             }
@@ -226,11 +265,19 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                background-size: 100% 80px; /* Adjust silhouette height for mobile */
+                padding-top: 80px; /* Adjust padding-top for mobile silhouette */
             }
-            footer .footer-column {
+            .footer-column {
                 min-width: unset;
                 width: 100%;
-                max-width: 400px;
+                padding-left: 0;
+            }
+            .footer-column::before {
+                display: none; /* Hide vertical lines on mobile */
+            }
+            .footer-column.center-text {
+                text-align: center; /* Pastikan di tengah untuk mobile */
             }
         }
     </style>
@@ -300,7 +347,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="footer-column">
+        <div class="footer-column center-text">
             <h3>Our Motto</h3>
             <p class="footer-text">We Design. We Create. We Manage.</p>
         </div>
@@ -328,6 +375,7 @@
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         const links = document.querySelectorAll('.nav-links a');
+
         hamburger.addEventListener('click', (e) => {
             e.stopPropagation();
             navLinks.classList.toggle('active');
@@ -337,18 +385,21 @@
                 hamburger.innerHTML = '☰';
             }
         });
+
         links.forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 hamburger.innerHTML = '☰';
             });
         });
+
         document.addEventListener('click', () => {
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 hamburger.innerHTML = '☰';
             }
         });
+
         navLinks.addEventListener('click', (e) => {
             e.stopPropagation();
         });
