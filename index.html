@@ -14,11 +14,16 @@
             font-style: normal;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            height: 100%; /* Menjamin html dan body mengambil 100% tinggi viewport */
+        }
         body {
             font-family: 'Adigiyana Toybox', sans-serif;
             background: linear-gradient(135deg, #759ab7, #ce6e55, #04132a);
             color: #fff;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Header Styles */
@@ -86,12 +91,12 @@
         }
 
         /* General Section Styles */
-        section {
+        main {
+            flex: 1;
             padding: 60px 20px;
             text-align: center;
         }
-        #services { padding-top: 100px; }
-        #portfolio { padding-top: 100px; }
+        #services, #portfolio { padding-top: 100px; }
         
         section h2 { color: #04132a; font-size: 2em; margin-bottom: 20px; }
         section p { max-width: 800px; margin: auto; }
@@ -345,39 +350,42 @@
             </div>
         </nav>
     </header>
-    <section class="hero">
-        <h2>We Design. We Create. We Manage.</h2>
-        <p>Event & Creative Solutions for Your Brand and Space</p>
-        <a href="https://wa.me/6288905450560" target="_blank" class="btn">
-            Let's Work Together
-        </a>
-    </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Event Design</h3>
-                <p>Booth design, exhibition layout, and other creative elements that attract the audience's attention.</p>
+
+    <main>
+        <section class="hero">
+            <h2>We Design. We Create. We Manage.</h2>
+            <p>Event & Creative Solutions for Your Brand and Space</p>
+            <a href="https://wa.me/6288905450560" target="_blank" class="btn">
+                Let's Work Together
+            </a>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Event Design</h3>
+                    <p>Booth design, exhibition layout, and other creative elements that attract the audience's attention.</p>
+                </div>
+                <div class="service">
+                    <h3>Interior Design</h3>
+                    <p>Interior design, functional and aesthetic for both work and personal spaces.</p>
+                </div>
+                <div class="service">
+                    <h3>Event Management</h3>
+                    <p>Planning and managing events from start to finish, to ensure it runs successfully.</p>
+                </div>
             </div>
-            <div class="service">
-                <h3>Interior Design</h3>
-                <p>Interior design, functional and aesthetic for both work and personal spaces.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Our Portfolio</h2>
+            <p>Here are some examples of our work.</p>
+            <div class="portfolio">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-            <div class="service">
-                <h3>Event Management</h3>
-                <p>Planning and managing events from start to finish, to ensure it runs successfully.</p>
-            </div>
-        </div>
-    </section>
-    <section id="portfolio">
-        <h2>Our Portfolio</h2>
-        <p>Here are some examples of our work.</p>
-        <div class="portfolio">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </section>
+        </section>
+    </main>
     
     <footer>
         <div class="footer-column">
