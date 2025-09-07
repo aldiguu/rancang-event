@@ -6,12 +6,6 @@
     <title>About | Rancang Event & Creative</title>
     <link rel="icon" type="image/png" href="Rancangevent-LOGO.png">
     <style>
-        section {
-            padding: 60px 20px;
-            text-align: center;
-            /* Tambahan untuk memperbaiki masalah header */
-            padding-top: 100px;
-        }
         @font-face {
             font-family: 'Adigiyana Toybox';
             src: url('AdigiyanaToybox.ttf') format('truetype');
@@ -69,6 +63,12 @@
             padding: 60px 20px;
             text-align: center;
         }
+        /* Mengatasi masalah judul tertutup header */
+        #about { padding-top: 100px; }
+        #services { padding-top: 100px; }
+        #portfolio { padding-top: 100px; }
+        #career { padding-top: 100px; }
+        
         section h2 { color: #04132a; font-size: 2em; margin-bottom: 20px; }
         section p { max-width: 800px; margin: auto; }
         .services {
@@ -97,7 +97,8 @@
             height: 200px;
             border-radius: 10px;
         }
-        .contact-info {
+        /* Mengubah tampilan kontak agar terlihat seperti footer */
+        .footer-contact {
             background: rgba(4, 19, 42, 0.8);
             padding: 20px;
             border-radius: 10px;
@@ -105,19 +106,16 @@
             margin: auto;
             text-align: center;
         }
-        .contact-info p {
+        .footer-contact p {
             margin: 10px 0;
             font-size: 1.1em;
         }
-        .contact-info strong {
-            color: #ce6e55;
-        }
-        .contact-info a {
+        .footer-contact a {
             color: #ce6e55;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        .contact-info a:hover {
+        .footer-contact a:hover {
             color: #fff;
         }
         .btn {
@@ -232,7 +230,7 @@
             Merancang | Event & Creative is a company specializing in event design, interior design, and event management. We are here to provide creative solutions tailored to your needs, whether for exhibitions, corporate events, or personal needs.
         </p>
     </section>
-    <section id="contact" class="contact">
+    <div class="footer-contact">
         <h2>Contact Us</h2>
         <div class="contact-info">
             <p>
@@ -247,7 +245,7 @@
                 </a>
             </p>
         </div>
-    </section>
+    </div>
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
