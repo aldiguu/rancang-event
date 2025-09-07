@@ -128,15 +128,27 @@
 
         /* Footer Professional Styles */
         footer {
-            background: url('GambarFooter.png') no-repeat top center;
-            background-size: 100% 100px;
+            background: transparent; /* Background transparan */
             color: #fff;
-            padding: 100px 20px 20px;
+            padding: 40px 20px 20px; /* Padding disesuaikan */
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: flex-start;
             gap: 30px;
+            position: relative; /* Untuk garis horizontal */
+        }
+
+        /* Garis horizontal di paling atas footer */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #fff; /* Warna garis putih */
+            opacity: 0.2; /* Transparansi */
         }
 
         /* Font profesional untuk footer */
@@ -147,7 +159,7 @@
         footer h3 {
             font-size: 1.5em;
             margin-bottom: 20px;
-            color: #ce6e55;
+            color: #ce6e55; /* Warna judul kolom tetap oranye */
         }
 
         footer ul {
@@ -172,40 +184,35 @@
         .footer-column {
             flex: 1;
             min-width: 200px;
-            padding-left: 20px;
+            padding: 0 20px; /* Padding samping untuk jarak dari garis vertikal */
             margin-bottom: 20px;
             position: relative;
         }
 
-        /* Garis vertikal di antara kolom */
-        .footer-column:not(:first-child)::before {
+        /* Garis vertikal di antara kolom (tidak terhubung ke garis horizontal) */
+        .footer-column:nth-child(2)::before,
+        .footer-column:last-child::before {
             content: '';
             position: absolute;
-            top: 0;
+            top: 20px; /* Jarak dari atas (dari garis horizontal) */
             left: 0;
             width: 1px;
-            height: 100%;
+            height: calc(100% - 40px); /* Tinggi disesuaikan agar tidak menyentuh atas/bawah */
             background-color: #fff;
             opacity: 0.2;
-        }
-
-        /* Penyesuaian untuk kolom tengah agar teksnya rata tengah */
-        .footer-column.center-text {
-            text-align: center;
-        }
-        .footer-column.center-text .footer-text {
-            margin: 0 auto;
         }
 
         /* Teks motto di tengah */
         .footer-text {
             font-size: 1.1em;
             max-width: 300px;
+            margin: 0 auto;
             line-height: 1.8;
+            text-align: center; /* Teks motto rata tengah */
         }
 
         .copyright-section {
-            background: #04132a;
+            background: #04132a; /* Tetap dengan warna solid untuk copyright */
             color: #fff;
             padding: 15px 20px;
             text-align: center;
@@ -258,16 +265,19 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                background-size: 100% 80px;
-                padding-top: 80px;
+                padding-top: 30px; /* Atur padding-top untuk mobile */
+            }
+            footer::before {
+                top: 0; /* Garis horizontal tetap di atas */
             }
             .footer-column {
                 min-width: unset;
                 width: 100%;
-                padding-left: 0;
+                padding: 0; /* Hapus padding samping di mobile */
             }
-            .footer-column::before {
-                display: none;
+            .footer-column:nth-child(2)::before,
+            .footer-column:last-child::before {
+                display: none; /* Sembunyikan garis vertikal di mobile */
             }
             .footer-column.center-text {
                 text-align: center;
@@ -330,7 +340,6 @@
     
     <footer>
         <div class="footer-column">
-            <h3>Menu</h3>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -340,13 +349,11 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="footer-column center-text">
-            <h3>Our Motto</h3>
+        <div class="footer-column">
             <p class="footer-text">We Design. We Create. We Manage.</p>
         </div>
         <div class="footer-column">
-            <h3>Contact Info</h3>
-            <ul>
+            <h3>Contact Info</h3> <ul>
                 <li>
                     <a href="mailto:Rancangevent@gmail.com">Rancangevent@gmail.com</a>
                 </li>
